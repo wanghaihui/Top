@@ -16,6 +16,8 @@ public class EventBus {
     public static String TAG = "EventBus";
 
     // 包中都可引用
+    // 为了解决线程并发的问题, 在语言内部引入了同步块和volatile关键字机制
+    // 用volatile修饰的变量, 线程在每次使用变量的时候, 都会读取变量修改后的最的值
     static volatile EventBus defaultInstance;
 
     private static final EventBusBuilder DEFAULT_BUILDER = new EventBusBuilder();
