@@ -1,8 +1,9 @@
 package com.haihui.top.one.mvp.base;
 
 /**
- * Created by wanba on 2016/4/27.
+ * 基础Presenter
  */
 public interface BasePresenter {
+    // 开始
     void start();
 }

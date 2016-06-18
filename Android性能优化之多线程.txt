@@ -1,0 +1,11 @@
+1.多线程并发的性能问题--这是一篇了解Android多线程编程不可多得的基础文章
+2.Android系统提供的多线程基础组件--AsyncTask, HandlerThread, IntentService, ThreadPool
+
+基础1: Threading Performance
+众所周知, Android程序的大多数代码操作都必须执行在主线程, 例如系统事件(设备屏幕的旋转), 输入事件(用户点击滑动), 程序回调服务, UI绘制, 闹钟事件
+为了让屏幕的刷新帧率达到60fps, 需要确保16ms内完成单次刷新的操作
+一旦刷新帧率掉到20fps, 用户就会明显感知到卡顿和不流畅
+为了避免掉帧问题, 需要使用多线程的技术方案
+
+1.AsyncTask: 为UI线程与工作线程(Worker Thread)之间进行快速的切换提供一种简单便捷的机制--适用于当下立即需要启动, 但是异步执行的生命周期短暂的使用场景
+2.HandlerThread:   
